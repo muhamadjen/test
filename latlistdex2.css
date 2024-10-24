@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Bitter";
+}
+a,p {
+    font-family: "Manrope";
+}
+header {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    position: fixed;
+    color: blanchedalmond;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.logo h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+.nav-link ul {
+    display: flex;
+}
+.nav-link ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+.nav-link ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition-duration: 300ms;
+}
+.nav-link ul li a:hover {
+    font-weight: 700;
+    text-decoration: solid burlywood 2px underline;
+}
+.home {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding: 50px;
+    justify-content: center;
+    align-items: end;
+}
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: blanchedalmond;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    text-align: center;
+}
+.title h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.title h1 span {
+    color: burlywood;
+}
+.title h3 {
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.cta p {
+    color: white;
+    font-size: 18px;
+}
+.cta a {
+    text-decoration: none;
+    height: max-content;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: rgba(222, 184, 135, 0.7);
+    transition-duration: 300ms;
+}
+.cta a:hover {
+    background-color: burlywood;
+}
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.cta p {
+    width: 70%;
+}
+
+.bg video {
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+/* EVENTS */
+.events-container {
+    display: block;
+    height: max-content;
+    width: 100%;
+    padding: 100px 50px;
+}
+
+.eventsheading {
+    padding: 20px 0px;
+}
+.eventsheading h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+}
+.break {
+    margin: 20px auto 50px auto;
+    width: 70px;
+    height: 5px;
+    background-color: burlywood;
+}
+.events {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    width: 32%;
+    height: auto;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+.card.big {
+    transform: scale(1.10);
+    margin: 0px 50px;
+}
+.desc {
+    padding: 20px;
+    text-align: center;
+}
+.desc h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.desc p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.desc a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    background-color: burlywood;
+    border-radius: 6px;
+}
+/* ETW Section */
+.etw-section {
+    position: relative;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background-image: url('Assets-200924/david-edelstein-N4DbvTUDikw-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.etw-section::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.etw-cta {
+    width: 50%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.etw-cta h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.etw-cta p {
+    color: blanchedalmond;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.etw-cta a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    background-color: burlywood;
+    border-radius: 6px;
+}
+/* FOOTER */
+footer {
+    background-color: black;
+    color: white;
+    padding: 50px
+}
+.footers{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.footers div {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+.footers div h1 {
+    margin-bottom: 10px;
+}
+.footers div ul {
+    display: flex;
+    list-style: none;
+}
+.footers div ul li {
+    margin-left: 10px;
+}
+.footers div ul li:first-child {
+    margin-left: 0px;
+}
+.footers div ul li a {
+    text-decoration: none;
+    color: burlywood;
+}
+.glimpse {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.glimpse h1 {
+    color: blanchedalmond;
+}
+.contact p {
+    margin-bottom: 10px;
+}
+.copyright {
+    padding-top: 25px;
+    border-top: 1px solid burlywood;
+    text-align: center;
+}
